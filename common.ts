@@ -6,6 +6,6 @@ export function verdict(a:boolean, b:boolean, msg:string) {
     }
 }
 
-export function log(s:string) {
+export function log(s:string | number) {
     console.log(s)
 }

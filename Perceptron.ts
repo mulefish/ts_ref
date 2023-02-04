@@ -8,14 +8,28 @@ export class Perceptron {
     LEARNING_RATE:number = 0.05;
 	INITIAL_WEIGHTS: number[] = [Math.random(), Math.random()]; 
      
-    // calculateWeightedSum(data:number[], weights:number[]) {
-	// 	let weightedSum:number = 0;
-	// 	for(let x=0; x < data.length; x++) { 
-    //         weightedSum += data[x] * weights[x];
-    //     }
-	// 	return weightedSum; 
-	// }
+    calculateWeightedSum(data:number[], weights:number[]) {
+		let weightedSum:number = 0;
+		for(let x=0; x < data.length; x++) { 
+            weightedSum += data[x] * weights[x];
+        }
+		return weightedSum; 
+	}
 
+    applyActivationFunction(weightedSum:number) {
+		if(weightedSum > 1) { 
+            return 1;
+        }
+        return 0;
+    }
+
+    adjustWeights(data:number[], weights:number[], error:number) {
+		let adjustedWeights:number[] = [] // = new double[weights.length];
+		for(let x=0; x < weights.length; x++) { 
+            adjustedWeights[x] = this.LEARNING_RATE * error * data[x] + weights[x];
+        }
+		return adjustedWeights;
+	}
 
 
 
