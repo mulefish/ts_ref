@@ -1,6 +1,12 @@
 # Goal: Do something with typescript
 # How: Port a neural net back prop from java to typescript - See youtube channel for the java
 
+# Files: 
+Perceptron.ts = the core logic    
+runner.ts = the main()   
+tdd.ts = tdd tests  
+common.ts = helper funcs  
+
 # Transpile: 
 tsc foo.ts -> creates -> foo.js 
 
@@ -10,6 +16,7 @@ ts-node foo.ts
 # URL 
 https://sites.fastspring.com/prototypeprj/instant/ai  
 https://www.youtube.com/watch?v=ZJNklhq1zvg&ab_channel=PrototypeProject  
+
 
 # OUTPUT
 (base) pmontgomery@FVFH51FAQ6LW ts_ref % ts-node runner.ts   
