@@ -39,7 +39,7 @@ w2[random weight2 ]
 calc[WeightSum=w1*x1 + w2*x2]
 step[StepFunc: If ws > 1 : 1, else : 0]
 error[Error: target_result - result ]
-adjust[W[i] Learning_Rate * error * X[i] + W[i]]
+adjust[W_i =  Learning_Rate * error * X_i + W_i]
 
 x1 --> w1 
 x1 --> w2 
