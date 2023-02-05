@@ -32,5 +32,5 @@ https://www.youtube.com/watch?v=ZJNklhq1zvg&ab_channel=PrototypeProject
 
 ```mermaid
 flowchart TD
-A->B
+A --> B
 ```
