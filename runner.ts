@@ -14,9 +14,10 @@ export function main() {
     let adjustedWeights:number[] = []
 
     while(errorFlag) {
-        printHeading(epochNumber++);
         errorFlag = false;
         error = 0;
+        printHeading(epochNumber)
+        
         for(let x = 0; x < perceptron.andData.length; x++) {
             const weightedSum:number = perceptron.calculateWeightedSum(perceptron.andData[x][0], weights);
             const result:number = perceptron.applyActivationFunction(weightedSum);
@@ -25,11 +26,13 @@ export function main() {
                 errorFlag = true;
             }
             adjustedWeights = perceptron.adjustWeights(data[x][0], weights, error);
-            printVector(data[x], weights, result, error, weightedSum, adjustedWeights);
+            printVector(epochNumber, data[x], weights, result, error, weightedSum, adjustedWeights);
             weights = adjustedWeights;
         }
+        epochNumber++
     }
 }
+
 
 export function printHeading(epochNumber:number) {
     log("\n==========================================Epoch # "+epochNumber+" ==============================================");
@@ -37,7 +40,34 @@ export function printHeading(epochNumber:number) {
     log("---------------------------------------------------------------------------------------------------");
 }
 
-export function printVector(data:number[][], weights:number[], result:number, error:number, weightedSum:number, adjustedWeights:number[]) {
+
+export function printVector(epoch:number, data:number[][], weights:number[], result:number, error:number, weightedSum:number, adjustedWeights:number[]) {
+
+    // //0.8816625424791409 bad; 0.81 good.
+    // let prettyWeights:number[] = []; 
+    // weights.forEach((actualValue:number)=> { 
+    //     prettyWeights.push( parseFloat(actualValue.toFixed(2))) 
+    // })
+
+    // const prettyWeightedSum:number = parseFloat(weightedSum.toFixed(2))
+
+
+    // let prettyAdjustedWeights:number[] = []; 
+    // adjustedWeights.forEach((actualValue:number)=> { 
+    //     prettyAdjustedWeights.push( parseFloat(actualValue.toFixed(2))) 
+    // })
+
+    // const table = {
+    //     epoch,
+    //     data,
+    //     weights:prettyWeights,
+    //     result,
+    //     error,
+    //     weightedSum:prettyWeightedSum,
+    //     adjustedWeights:prettyAdjustedWeights
+    // }
+    // console.table( table )
+
 
     const w0 = weights[0].toFixed(2)
     const w1 = weights[1].toFixed(2)
@@ -47,7 +77,10 @@ export function printVector(data:number[][], weights:number[], result:number, er
     log("  "+ w0 +" | "+ w1 +" | "+data[0][0]+"  | "+ data[0][1] +
                        "  |      "+data[1][0]+"        |   "+result+"    | "+error+"   |     "+ws + 
                        "     |     "+ aw0+"    | "+ aw1);
+
 }
+
+
 
 if (require.main === module) {
     main() 

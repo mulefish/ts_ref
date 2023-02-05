@@ -1,0 +1,22 @@
+{
+  "name": "ts_ref",
+  "version": "1.0.0",
+  "description": "# Transpile:  tsc foo.ts -> creates -> foo.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mulefish/ts_ref.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mulefish/ts_ref/issues"
+  },
+  "homepage": "https://github.com/mulefish/ts_ref#readme",
+  "dependencies": {
+    "callsite": "^1.0.0"
+  }
+}

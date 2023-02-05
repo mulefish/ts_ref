@@ -64,9 +64,11 @@ function adjustWeights_test() {
     const weights:number[] = [0.9, 0.2]
     const error:number = 0
     const result:number[] = p.adjustWeights(data, weights, error)    
-    console.log( result)
     const isOk:boolean = JSON.stringify(result) === JSON.stringify(weights)
     verdict(isOk, true, "adjustWeights_test")
+}
+function caller_test() { 
+    log("LINE 72")
 }
 
 function main() { 
@@ -75,5 +77,6 @@ function main() {
     perceptron_calculateWeightedSum_test() 
     applyActivationFunction_test() 
     adjustWeights_test()
+    caller_test()
 }
 main()

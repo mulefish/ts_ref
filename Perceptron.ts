@@ -7,7 +7,15 @@ export class Perceptron {
 
     LEARNING_RATE:number = 0.05;
 	INITIAL_WEIGHTS: number[] = [Math.random(), Math.random()]; 
-     
+    getData() { 
+        return this.andData;
+    }
+    getLearningRate() { 
+        return this.LEARNING_RATE;
+    }
+    getInitialWeights() { 
+        return this.INITIAL_WEIGHTS;
+    }
     calculateWeightedSum(data:number[], weights:number[]) {
 		let weightedSum:number = 0;
 		for(let x=0; x < data.length; x++) { 
