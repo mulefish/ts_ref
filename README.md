@@ -32,17 +32,18 @@ https://www.youtube.com/watch?v=ZJNklhq1zvg&ab_channel=PrototypeProject
 
 ```mermaid
 flowchart TD
-input1[Input 1]
-input2[Input 2]
-hidden1[Hidden node 1, in layer 1]
-hidden2[Hidden node 2, in layer 1]
+x1[X1]
+x2[X2]
+w1[random weight1 ]
+w2[random weight2 ]
+calc[WeightSum=w1*x1 + w2*x2]
 
-
-input1 --> hidden1 
-input1 --> hidden2 
-input2 --> hidden1
-input2 --> hidden2
-
+x1 --> w1 
+x1 --> w2 
+x2 --> w1
+x2 --> w2
+w1 -->calc
+w2 -->calc
 
 
 ```
