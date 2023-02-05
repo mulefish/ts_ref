@@ -16,7 +16,7 @@ export function main() {
     while(errorFlag) {
         errorFlag = false;
         error = 0;
-        printHeading(epochNumber)
+        printHead(epochNumber)
         
         for(let x = 0; x < perceptron.andData.length; x++) {
             const weightedSum:number = perceptron.calculateWeightedSum(perceptron.andData[x][0], weights);
@@ -26,7 +26,7 @@ export function main() {
                 errorFlag = true;
             }
             adjustedWeights = perceptron.adjustWeights(data[x][0], weights, error);
-            printVector(epochNumber, data[x], weights, result, error, weightedSum, adjustedWeights);
+            printText(epochNumber, data[x], weights, result, error, weightedSum, adjustedWeights);
             weights = adjustedWeights;
         }
         epochNumber++
@@ -34,14 +34,14 @@ export function main() {
 }
 
 
-export function printHeading(epochNumber:number) {
-    log("\n==========================================Epoch # "+epochNumber+" ==============================================");
+export function printHead(epochNumber:number) {
+    log("==========================================Epoch # "+epochNumber+" ==============================================");
     log("   w1  |  w2  | x1 | x2 | Target Result | Result | error | Weighted Sum | adjusted w1 | adjusted w2");
     log("---------------------------------------------------------------------------------------------------");
 }
 
 
-export function printVector(epoch:number, data:number[][], weights:number[], result:number, error:number, weightedSum:number, adjustedWeights:number[]) {
+export function printText(epoch:number, data:number[][], weights:number[], result:number, error:number, weightedSum:number, adjustedWeights:number[]) {
 
     // //0.8816625424791409 bad; 0.81 good.
     // let prettyWeights:number[] = []; 

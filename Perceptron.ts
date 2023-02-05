@@ -5,7 +5,7 @@ export class Perceptron {
     [[1,0],[0]],
     [[1,1],[1]]];
 
-    LEARNING_RATE:number = 0.05;
+    LEARNING_RATE:number = 0.005;
 	INITIAL_WEIGHTS: number[] = [Math.random(), Math.random()]; 
     getData() { 
         return this.andData;
