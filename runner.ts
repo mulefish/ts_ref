@@ -43,32 +43,6 @@ export function printHead(epochNumber:number) {
 
 export function printText(epoch:number, data:number[][], weights:number[], result:number, error:number, weightedSum:number, adjustedWeights:number[]) {
 
-    // //0.8816625424791409 bad; 0.81 good.
-    // let prettyWeights:number[] = []; 
-    // weights.forEach((actualValue:number)=> { 
-    //     prettyWeights.push( parseFloat(actualValue.toFixed(2))) 
-    // })
-
-    // const prettyWeightedSum:number = parseFloat(weightedSum.toFixed(2))
-
-
-    // let prettyAdjustedWeights:number[] = []; 
-    // adjustedWeights.forEach((actualValue:number)=> { 
-    //     prettyAdjustedWeights.push( parseFloat(actualValue.toFixed(2))) 
-    // })
-
-    // const table = {
-    //     epoch,
-    //     data,
-    //     weights:prettyWeights,
-    //     result,
-    //     error,
-    //     weightedSum:prettyWeightedSum,
-    //     adjustedWeights:prettyAdjustedWeights
-    // }
-    // console.table( table )
-
-
     const w0 = weights[0].toFixed(2)
     const w1 = weights[1].toFixed(2)
     const aw0 = adjustedWeights[0].toFixed(2)
