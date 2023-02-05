@@ -54,8 +54,6 @@ export function printText(epoch:number, data:number[][], weights:number[], resul
 
 }
 
-
-
 if (require.main === module) {
     main() 
 }
