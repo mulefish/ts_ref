@@ -32,5 +32,17 @@ https://www.youtube.com/watch?v=ZJNklhq1zvg&ab_channel=PrototypeProject
 
 ```mermaid
 flowchart TD
-A --> B
+input1[Input 1]
+input2[Input 2]
+hidden1[Hidden node 1, in layer 1]
+hidden2[Hidden node 2, in layer 1]
+
+
+input1 --> hidden1 
+input1 --> hidden2 
+input2 --> hidden1
+input2 --> hidden2
+
+
+
 ```
