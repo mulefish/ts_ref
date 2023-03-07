@@ -8,6 +8,7 @@ tdd.ts = tdd tests
 common.ts = helper funcs  
 
 # Transpile: 
+On this machine - use 'nvm use 17'
 tsc foo.ts -> creates -> foo.js 
 
 # Transpile + Run ( w/o creating a *js file ):
