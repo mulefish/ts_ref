@@ -11,7 +11,7 @@ common.ts = helper funcs
 tsc foo.ts -> creates -> foo.js 
 
 # Transpile + Run ( w/o creating a *js file ):
-On this machine - use 'nvm use 17'
+On this machine - use 'nvm use 17'  
 ts-node runner.js
  
 # URL 
