@@ -8,12 +8,12 @@ tdd.ts = tdd tests
 common.ts = helper funcs  
 
 # Transpile: 
-On this machine - use 'nvm use 17'
 tsc foo.ts -> creates -> foo.js 
 
 # Transpile + Run ( w/o creating a *js file ):
-ts-node foo.ts
-
+On this machine - use 'nvm use 17'
+ts-node runner.js
+ 
 # URL 
 https://sites.fastspring.com/prototypeprj/instant/ai  
 https://www.youtube.com/watch?v=ZJNklhq1zvg&ab_channel=PrototypeProject  
