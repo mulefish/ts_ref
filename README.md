@@ -18,7 +18,7 @@ ts-node runner.js
 https://sites.fastspring.com/prototypeprj/instant/ai  
 https://www.youtube.com/watch?v=ZJNklhq1zvg&ab_channel=PrototypeProject  
 
-
+ 
 # OUTPUT
 (base) pmontgomery@FVFH51FAQ6LW ts_ref % ts-node runner.ts   
 /runner.ts printHead|=Epoch # 0 ====    
